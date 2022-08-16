@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   
+    android:descendantFocusability="beforeDescendants"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <!--header-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:weightSum="1"
+            android:background="@drawable/layout_top_rounded_corner_store_selection">
+
+            <ImageButton
+                android:id="@+id/ibExpand"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:background="@android:color/transparent"
+                android:layout_margin="@dimen/dimen_1dp"
+                android:visibility="invisible"
+                android:layout_below="@+id/et_descr"
+                android:src="@drawable/baseline_expand_more_black_18dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:gravity="left"
+                
+                android:text="Outlet Coverage(No of Stores)"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:descendantFocusability="beforeDescendants"
+            android:paddingLeft="4dp"
+            android:paddingTop="2dp"
+            android:paddingRight="4dp">
+            <ImageButton
+                android:id="@+id/ibExpand121"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:background="@android:color/transparent"
+                android:layout_margin="@dimen/dimen_1dp"
+                android:layout_below="@+id/et_descr"
+                android:visibility="gone"
+                android:src="@drawable/baseline_expand_more_black_18dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2.4"
+
+                android:gravity="center"
+                
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="#FFE699"
+                android:gravity="center"
+                
+                android:text="Coverage"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="3.6"
+               >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Achievement"
+                    android:background="#2F75B5"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3.6">
+
+                    <TextView
+                        android:id="@+id/txt_lstStock"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#DDEBF7"
+                        android:gravity="center"
+                        
+                        android:text="TGT"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#70CFFE"
+                        android:gravity="center"
+                        
+                        android:text="YTD"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.8"
+                        android:background="#70CFFE"
+                        android:gravity="center"
+
+                        android:text="P3M"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.8"
+                        android:background="#70CFFE"
+                        android:gravity="center"
+
+                        android:text="MTD"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#70CFFE"
+                        android:gravity="center"
+
+                        android:text="Ystr"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#2F75B5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Distribution"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#70CFFE"
+                        android:gravity="center"
+                        
+                        android:text="New"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#70CFFE"
+                        android:gravity="center"
+                        
+                        android:text="Lost"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

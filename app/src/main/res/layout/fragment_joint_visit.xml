@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingBottom="10dp"
+    android:fitsSystemWindows="true"
+    tools:context=".JointVisitActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_first"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_header_color"
+        android:gravity="center_vertical">
+
+
+        <ImageView
+            android:id="@+id/img_side_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/ic_back_new"/>
+
+
+        <TextView
+            android:id="@+id/txtview_selectstoretext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_side_back"
+            android:text="Mark Visit"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_Refresh"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f1f1f1"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/layout_first"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/custom_button"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"
+            android:text="Refresh Data"
+            android:visibility="invisible"
+            android:textColor="#ffffff" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvWorkingWith"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Working With: "
+        android:paddingTop="10dp"
+        android:paddingLeft="16dp"
+        android:textColor="#201359"
+        android:layout_below="@+id/rl_Refresh"
+        android:background="#f1f1f1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rl_So"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f1f1f1"
+        android:layout_below="@+id/tvWorkingWith"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="2dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_SO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SO "
+            android:textColor="#201359"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_SO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_SO"
+            android:background="@drawable/spinner_bckground"
+            android:prompt="@string/select_so" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_DSM"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/rl_So"
+        android:background="#f1f1f1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="2dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txt_Route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TSI"
+            android:textColor="#201359"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_dsm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txt_Route"
+            android:background="@drawable/spinner_bckground"
+
+            android:prompt="@string/select_dsm" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/rl_CoverageArea"
+        android:layout_below="@+id/rl_DSM"
+        android:background="#f1f1f1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="2dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_coverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Route to be Worked On"
+            android:textColor="#201359"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_coverageArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_coverage"
+            android:background="@drawable/spinner_bckground"
+            android:prompt="@string/select_route" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:enabled="true"
+        android:layout_below="@+id/rl_CoverageArea"
+        android:background="@drawable/custom_button"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:textSize="12sp"
+        android:text="@string/Next"
+
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

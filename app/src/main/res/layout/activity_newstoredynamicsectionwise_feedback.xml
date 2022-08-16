@@ -1,0 +1,496 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fitsSystemWindows="true">
+    <!--
+    main layout background color instead of bg_rspl
+    android:background="#F5F5F5"
+    -->
+    <RelativeLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rounded_header_corner"
+        android:paddingLeft="5dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/AddNewStoreHeader"
+            android:id="@+id/tv_feedbackheading"
+            android:textColor="#CD005B"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_exit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:src="@drawable/exit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtExit"
+                android:textColor="#ED3338"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_DynamicHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_header"
+
+        android:paddingLeft="5dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_back_btn" />
+
+        <TextView
+            android:id="@+id/txt_storeSummary"
+            style="@style/contentTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivBack"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Anand Store Summary"
+            android:textAllCaps="true"
+            android:textColor="#5173B2"
+            app:fontFamily="@font/helvetica_bold" />
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/svItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/ll_button"
+
+        android:layout_below="@+id/ll_DynamicHeading">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/fragmentForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_overAllSignatureSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_ASMSignatureSection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/rl_ASMSign_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:layout_marginTop="-100dp"
+
+                        android:layout_marginBottom="-100dp"
+                        android:background="@drawable/edittext_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="#01B5F0"
+
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="ASM"
+                            android:textColor="#fff"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@android:color/white">
+
+                            <TextView
+                                android:id="@+id/textviewSignhere"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="#1a237e"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="SIGN HERE"
+                                android:textColor="#fff"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/cancelASMSign"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="#1a237e"
+                                android:text="@string/txtCancel"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/clearASMSign"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="#1a237e"
+                                android:text="@string/txtclearSign"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp" />
+
+                            <Button
+                                android:id="@+id/getsignASM"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="#1a237e"
+                                android:text="@string/txtsave"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutASMSign"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/transparent_imageASM"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@android:color/transparent" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_TSIignatureSection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:visibility="visible">
+                <RelativeLayout
+                    android:id="@+id/rl_TSISign_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:layout_marginTop="-100dp"
+
+                        android:layout_marginBottom="-100dp"
+                        android:background="@drawable/edittext_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="#01B5F0"
+
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="TSI"
+                            android:textColor="#fff"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@android:color/white">
+
+                            <TextView
+                                android:id="@+id/textviewSignhereTSI"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="#1a237e"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="SIGN HERE"
+                                android:textColor="#fff"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/cancelTSISign"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="#1a237e"
+                                android:text="@string/txtCancel"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/clearTSISign"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="#1a237e"
+                                android:text="@string/txtclearSign"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp" />
+
+                            <Button
+                                android:id="@+id/getsignTSI"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="#1a237e"
+                                android:text="@string/txtsave"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutTSISign"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/transparent_imageTSI"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@android:color/transparent" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--<LinearLayout
+            android:id="@+id/ll_map"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="250dp"
+
+
+        />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="@string/IsLocCorrect"/>
+            <RadioGroup
+                android:id="@+id/rg_yes_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AlertDialogYesButton"/>
+                <RadioButton
+                    android:id="@+id/rb_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AlertDialogNoButton"/>
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/ll_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_rfrshCmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_gravity="fill"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"
+                android:textColor="@android:color/black"
+                android:text="@string/RefreshLoc"/>
+                <Button android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/logo_background"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+
+                    android:textColor="#FFFF4424"
+
+                    android:id="@+id/btn_refresh"
+                    android:textStyle="bold"
+                    android:text="@string/txtRefresh"
+                    />
+                    </LinearLayout>
+            </LinearLayout>-->
+
+    </LinearLayout>
+</ScrollView>
+
+
+<LinearLayout
+android:id="@+id/ll_button"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="2dp"
+android:layout_marginLeft="16dp"
+android:layout_marginRight="16dp"
+android:layout_alignParentBottom="true">
+<LinearLayout
+    android:id="@+id/ll_back"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:visibility="invisible"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/previous" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/lastvisitdetails_back"
+        android:gravity="center"
+        android:layout_weight="1" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll_save_Exit"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:visibility="gone"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/save_img" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/SaveExit"
+        android:layout_weight="1" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll_next"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_next"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/next" />
+
+    <TextView
+        android:id="@+id/txt_Next"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/txtNext"
+        android:layout_weight="1" />
+</LinearLayout>
+</LinearLayout>
+
+
+    </RelativeLayout>

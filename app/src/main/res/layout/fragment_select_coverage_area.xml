@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_10dp"
+    tools:context=".SelectCoverageAreaFragment">
+
+    <TextView
+        android:id="@+id/tvOpenVisitHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Select Coverage Area:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/et_SearchCoverageArea"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_below="@+id/tvOpenVisitHeader"
+            android:background="@drawable/bottomborder"
+            android:hint="@string/search_coveragearea"
+            android:padding="5dp"
+            />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rl_CoverageArea"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginLeft="@dimen/dimen_2dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_above="@+id/bt_Next"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_below="@+id/et_SearchCoverageArea"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="20dp" />
+
+    <Button
+        android:id="@+id/bt_Next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custom_button"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textSize="12sp"
+        android:text="@string/Next"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+package com.astix.rajtraderssfasmasales.DistributorSocuting.ScoutInterface;
+
+import com.astix.rajtraderssfasmasales.DistributorSocuting.ScoutingModels.TblPotentialDistributorRetailersFeedBackDetails;
+
+public interface InterfaceEditDistributorScoutingRetailerFeedBaclStoreSelectoin {
+    public void fnCallActivityFeedbackDistributorRetailerStoreSelection(TblPotentialDistributorRetailersFeedBackDetails tblPotentialDistributorRetailersFeedBackDetails);
+
+}

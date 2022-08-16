@@ -1,0 +1,9 @@
+package com.astix.rajtraderssfasmasales.DistributorSocuting.ScoutInterface;
+
+import com.astix.rajtraderssfasmasales.DistributorSocuting.ScoutingModels.TblPotentialDistributorCompetitorBrandMstr;
+import com.astix.rajtraderssfasmasales.DistributorSocuting.ScoutingModels.TblPotentialDistributorCompetitorCompanyMstr;
+
+public interface InterfaceActivityScoutingShowHideOthersBox {
+    public void showCompanyOtherBox(TblPotentialDistributorCompetitorCompanyMstr tblPotentialDistributorCompetitorCompanyMstr);
+    public void showBrandOtherBox(TblPotentialDistributorCompetitorBrandMstr tblPotentialDistributorCompetitorBrandMstr);
+}

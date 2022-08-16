@@ -1,0 +1,89 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ll_DateCompleteContainer"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_below="@+id/ll_inputcontainer"
+android:weightSum="4"
+android:layout_marginTop="5dp"
+android:visibility="visible">
+<LinearLayout
+    android:id="@+id/ll_PrdName"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_weight="3"
+    android:background="@drawable/row_round_corner"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:text="Prodct Name"
+        android:id="@+id/tv_prdName"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="11sp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/AllContainer"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+
+    android:layout_weight="1"
+
+
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/et_prd_fcs_Tgt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:inputType="numberDecimal"
+            style="@style/editTextStyle"
+            android:hint="Todays Sec Vol"
+            android:gravity="center"
+            android:maxLength="5"
+            android:textColor="#000000"
+            android:textSize="11dp"
+
+            android:background="@drawable/et_boundary"
+            />
+
+
+
+        <EditText
+            android:id="@+id/et_prdDistiTgt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:inputType="number"
+            style="@style/editTextStyle"
+            android:hint="PC Tgt"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:maxLength="5"
+            android:textColor="#000000"
+            android:textSize="11dp"
+
+            android:background="@drawable/et_boundary"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</LinearLayout>

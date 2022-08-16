@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.astix.rajtraderssfasmasales">
+
+    <permission
+        android:name="com.astix.rajtraderssfasmasales.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" /> <!-- Permission to access data from network provider -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- Permission for receiveing GCM message -->
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Permission to get the Gmail account(This is required only if you are developing application for lower than android version 4.0) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+
+        <queries>
+            <intent>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+            </intent>
+        </queries>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <application
+        android:name="com.astix.app"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/StorelistTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ActualVisitMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SignUpModule.OtpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.mTASModule.MTASWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ShowPathActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SignUpModule.SignUp"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.astix.rajtraderssfasmasales.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StoreEditActivityContactLocation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.RouteApprovalOTPScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.PersonGateMeetingTarget"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.merchandizing.PicBeforeMerchandising"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.merchandizing.PicAfterMerchandising"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.WebViewAttndnc_ScndryUpdt"
+            android:screenOrientation="landscape" />
+        <activity android:name="com.astix.rajtraderssfasmasales.DayStartActivity" />
+        <activity android:name="com.astix.rajtraderssfasmasales.AllButtonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.astix.rajtraderssfasmasales.StoreSelection"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.astix.rajtraderssfasmasales.DistributorSocuting.SocutingDistributorSelection"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UpdateExisitingDistributor.ActivityUpdateExisitingDistributorSelectionList"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name="com.astix.rajtraderssfasmasales.StoreSelectionForReOrder" />
+        <activity android:name="com.astix.rajtraderssfasmasales.LastVisitDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.astix.rajtraderssfasmasales.utils.CartonProductEntry" />
+        <activity android:name="com.astix.rajtraderssfasmasales.LastVisitDetailsSecondPart" />
+
+        <activity android:name="com.astix.rajtraderssfasmasales.WebViewDSRDataReportActivity"
+           />
+        <activity android:name="com.astix.rajtraderssfasmasales.WebViewDSRTrackerActivity"
+           />
+        <activity android:name="com.astix.rajtraderssfasmasales.DialogActivity_Report" android:theme="@style/marketVisitTheme"/>
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ProductOrderFilterSearch"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ReturnActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SKUWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SKUWiseSummaryReportMTD"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StoreAndSKUWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StoreAndSKUWiseSummaryReportMTD"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StoreWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+        <activity android:name="com.astix.rajtraderssfasmasales.CheckDatabaseData" />
+        <activity android:name="com.astix.rajtraderssfasmasales.CheckDatabaseDataOrderBooking" />
+        <activity android:name="com.astix.rajtraderssfasmasales.MapActivity" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.TargetVsAchievedActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.astix.rajtraderssfasmasales.DistributorCheckInFirstActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.astix.rajtraderssfasmasales.DistributorCheckInSecondActivity"
+          />
+       <!-- <activity android:name="com.example.gcm.NotificationActivity"
+            android:screenOrientation="portrait"/>-->
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.LauncherActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.POSMaterialActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ProductOrderFilterSearch_RecycleView"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!--
+        <activity
+            android:name=".ProductOrderSearch"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" >
+        </activity>
+        -->
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DistributorEntryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SyncMaster"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.InvoiceSyncMaster"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StoreWiseSummaryReportMTD"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--
+        <activity
+            android:name=".My_Summary"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name=".My_Summary_ByTab"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DetailReport_Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.InvoiceStoreSelection"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SelectCoverageAreaFragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.reports.ReportsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".PendingJointVisitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.JointVisitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <!--
+        <activity
+            android:name=".Add_New_Store"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".Add_New_Store_NewFormat"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name=".Stock_Submit"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".New_Stock_Submit"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.InvoiceProductList"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+      <!--  <activity
+            android:name="com.example.gcm.HomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:noHistory="true" />-->
+        <!--
+        <activity
+            android:name=".WebPageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <!--
+        <service
+            android:name="com.astix.sfatju.Location_Getting_Service"
+            android:enabled="true" >
+        </service>
+
+        <activity
+            android:name="com.astix.sfatju.GetLock"
+            android:label="@string/title_activity_get_lock" >
+        </activity>
+        <activity
+            android:name="com.astix.sfatju.PicMgr"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_pic_mgr"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name="com.astix.sfatju.MapSunilActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.astix.sfatju.JSONParser"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service
+            android:name="com.astix.sfatju.GPSTrackerService"
+            android:enabled="true" />
+        <service
+            android:name="com.astix.sfatju.FusedTrackerService"
+            android:enabled="true" />
+        -->
+        <!-- Goolge API Key -->
+        <!--
+                <meta-data
+               android:name="com.google.android.maps.v2.API_KEY"
+               android:value="AIzaSyAzpyoQozRjzBR39LcKWhCn8M9Qwp-aNac" />
+        -->
+        <!-- android:value="AIzaSyB-0zXRgQOO6UXY7r5oQEuSp8d1YObPlu4" -->
+        <!-- Debugging key -->
+        <!-- android:value="AIzaSyC6q9cMRezVxHVVXODisV8H9hqjEecH5cM" -->
+        <!-- Releasing key -->
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.Add_New_Store_DynamicSectionWise"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ViewAddedStore"
+            android:label="@string/title_activity_view_added_store" /> <!-- Register Broadcast receiver -->
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.AddNewStore_DynamicSectionWise"
+            android:label="@string/title_activity_view_added_store"
+            android:screenOrientation="portrait" /> <!-- Register Service -->
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DynamicQuestionsFragment"
+            android:label="@string/title_activity_view_added_store"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.QuotationActivity"
+            android:label="@string/title_activity_quotation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeTab">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.Delivery_Details_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/detailActivityTheme" />
+        <activity android:name="com.astix.rajtraderssfasmasales.SalesValueTarget" />
+        <activity android:name="com.astix.rajtraderssfasmasales.IncentiveActivity" />
+        <activity android:name="com.astix.rajtraderssfasmasales.DetailReportSummaryActivity" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DistributorMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SyncMasterDistributor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DSR_Registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StoreClosedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.AddedOutletSummaryReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DialogDayEndSummaryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DayEndDialogTheme" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.CollectionActivityNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ActualVisitStock"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ProductEntryForm"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            />
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.PurchaseOrderWebActivity"
+            android:configChanges="orientation|screenSize" />
+
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ProductOrderReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.ProductInvoiceReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.WarehouseCheckInFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.WarehouseCheckInSecondActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StorelistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.printer.DeviceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StockRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DayCollectionReport"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DayEndStoreCollectionsChequeReport"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StockUnloadEndClosure"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.collectionReportStoreList"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.CollectionDetailsStoreWise"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StoreEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".ReportPopUpIndivisualSalesMan"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ReportPopUpSalesManTargetVsAchDayWise"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.StoreEditActivity1"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SurveyStoreList"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.RemainingStockStatusReport"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DistributionStockStatus"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.DistributorStockStatusSKUWise"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.Date_Wise_Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SpokeVisitDates"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.astix.rajtraderssfasmasales.SalesReportFeetAndIndivualStoreLevelDetails"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".DistributorSocuting.ActivityDistributorAppointment"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".UpdateExisitingDistributor.ActivityDistributorUpdation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DistributorSocuting.ActivityDistributorScouting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDistributorRetailerFeedbackStoreSelectionActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity android:name=".FirebaseNotifications.NotificationActivity"
+            android:screenOrientation="portrait"/>
+        <service android:name=".FirebaseNotifications.FirebaseMessageReceiver"
+            android:stopWithTask="false"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBUuMA_EyjG0VSP-dAyMgGeCG-niwDL8rQ" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f1190ff0cbdbe64db00b2abc4a814062eb1a7aa0" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.astix.rajtraderssfasmasales.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver
+            android:name="com.astix.rajtraderssfasmasales.BroadcastReceiverOnBootComplete"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <!-- <receiver
+           android:name="com.example.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>-->
+
+        <service
+            android:name="com.astix.rajtraderssfasmasales.GeocodeAddressIntentService"
+            android:exported="false" />
+        <service
+            android:name="com.astix.rajtraderssfasmasales.sync.SyncJobService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <receiver
+            android:name="com.astix.rajtraderssfasmasales.Services.MySMSBroadcastService"
+            android:enabled="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

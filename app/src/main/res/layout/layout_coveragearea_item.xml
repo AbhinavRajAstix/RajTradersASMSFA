@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:descendantFocusability="beforeDescendants"
+    android:padding="@dimen/dimen_1dp"
+    >
+
+
+    <RadioButton
+        android:id="@+id/rbCoverage"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:scrollHorizontally="true"
+        android:singleLine="false"
+        android:textColor="#000000"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_marginRight="10dp"
+
+        />
+
+</RelativeLayout>
